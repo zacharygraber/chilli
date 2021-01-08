@@ -1,0 +1,2 @@
+# chilli
+Chilli Discord Bot

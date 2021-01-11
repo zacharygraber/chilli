@@ -138,7 +138,10 @@ async def on_message(message):
 
     # Offer a hug
     if message.content.startswith(prefix + "hug"):
-        await message.channel.send("Ugh, fine. I guess you are my little pogchamp " + message.author.mention + ". Come here.", file=discord.File("hug.jpg"))
+        if len(message.mentions) == 0:
+            await message.channel.send("Ugh, fine. I guess you are my little pogchamp " + message.author.mention + ". Come here.", file=discord.File("hug.jpg"))
+        else:
+            await message.channel.send("Ugh, fine, " + message.author.mention + ". I guess " + message.mentions[0].mention + " *is* my little pogchamp. Come here.", file=discord.File("hug.jpg"))
         return
 
 #################################################################

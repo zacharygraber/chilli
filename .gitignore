@@ -131,3 +131,6 @@ dmypy.json
 # Other stuff
 clientsecret.dat
 clientid.dat
+bottoken.dat
+test.py
+.cache-sneakypancake17
